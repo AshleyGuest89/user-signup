@@ -52,6 +52,9 @@ def validate_form():
         if "@" not in email or "." not in email or " " in email:
             email_error = "Not a valid email address"
         
+        if email.count("@") != 1 or email.count(".") != 1:
+            email_error = "Not a valid email address"
+        
         if len(email) < 3 or len(email) > 20:
             email_error = "Email must be between 3 and 20 characters"
 
